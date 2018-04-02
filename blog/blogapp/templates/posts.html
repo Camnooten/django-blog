@@ -1,0 +1,25 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <h1>Django Blog</h1>
+    <i><h2>The best fake news.</h2></i>
+{% for post in posts %}
+    <div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{ post.title }}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Made by {{ post.author }} on {{ post.created_date }}</h6>
+    <p class="card-text">{{ post.text }}</p>
+  </div>
+</div>
+{% endfor %}
+<footer><center>
+    <a href="/admin" class="btn btn-danger">Admin</a>
+    <a class="btn btn-primary" href="https://github.com/camnooten/django-blog">Source Code</a>
+</center>
+</footer>
+</div>
+</body>
+</html>
